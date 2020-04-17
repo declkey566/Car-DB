@@ -55,7 +55,7 @@ namespace CarInventory
             {
                 writer.WriteStartElement("car");
 
-                // writer.WriteElementString("id", Convert.ToString(e.id));
+                
                 writer.WriteElementString("year", c.year);
                 writer.WriteElementString("make", c.make);
                 writer.WriteElementString("colour", c.colour);
@@ -82,7 +82,7 @@ namespace CarInventory
         }
         public void loadDB()
         {
-            //int newID;
+           
             string newYr, newMk, newCl, newMl;
 
             XmlReader reader = XmlReader.Create("Resources/CarXML.xml");
@@ -91,9 +91,9 @@ namespace CarInventory
             {
                 if (reader.NodeType == XmlNodeType.Text)
                 {
-                    // newID = Convert.ToInt16(reader.ReadString());
+                   
 
-                   // reader.ReadToNextSibling("year");
+                  
                     newYr = reader.ReadString();
 
                     reader.ReadToNextSibling("make");
